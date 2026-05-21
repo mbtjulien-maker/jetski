@@ -4,6 +4,7 @@ import { Logo } from "./Logo";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { MobileMenu } from "./MobileMenu";
 import { HeaderSearch } from "./HeaderSearch";
+import { HeaderNav } from "./HeaderNav";
 import { IconShoppingBag, IconUser } from "@tabler/icons-react";
 import { readCart, cartCount } from "@/lib/cart";
 import { auth } from "@/lib/auth";
@@ -19,13 +20,7 @@ export async function Header() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between gap-4">
         <Logo />
-        <nav className="hidden md:flex items-center gap-8 text-sm">
-          <Link href="/shop" className="link-underline">{t("shop")}</Link>
-          <Link href="/shop?condition=new" className="link-underline">{t("newArrivals")}</Link>
-          <Link href="/shop?condition=occasion" className="link-underline">{t("occasion")}</Link>
-          <Link href="/about" className="link-underline">{t("about")}</Link>
-          <Link href="/contact" className="link-underline">{t("contact")}</Link>
-        </nav>
+        <HeaderNav />
         <div className="flex items-center gap-5">
           <HeaderSearch />
           <div className="hidden md:block">
