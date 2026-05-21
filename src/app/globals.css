@@ -121,6 +121,24 @@ body {
   transform-origin: left;
 }
 
+/* Brand marquee — seamless infinite scroll */
+@keyframes brand-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.brand-marquee-track {
+  animation: brand-marquee 38s linear infinite;
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+.brand-marquee-track:hover {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-marquee-track { animation: none; }
+}
+
 /* Glass panel — lets the background image bleed through */
 .glass {
   background-color: rgba(10, 10, 10, 0.55) !important;

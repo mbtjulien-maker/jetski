@@ -6,6 +6,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { ScrollCue } from "@/components/ScrollCue";
 import { Reveal } from "@/components/Reveal";
 import { TypewriterText } from "@/components/TypewriterText";
+import { BrandsMarquee } from "@/components/BrandsMarquee";
 import { IconArrowRight, IconTruck, IconShield, IconCreditCard } from "@tabler/icons-react";
 
 export default async function HomePage({
@@ -104,24 +105,7 @@ export default async function HomePage({
       </section>
 
       {/* BRANDS */}
-      <section className="border-y border-border py-20">
-        <Reveal className="mx-auto max-w-7xl px-6">
-          <p className="text-xs uppercase tracking-[0.3em] text-muted text-center mb-10">
-            {t("brandsTitle")}
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-6 text-2xl font-light tracking-[0.2em] text-muted/70">
-            <span>SEA-DOO</span>
-            <span className="opacity-60">·</span>
-            <span>YAMAHA</span>
-            <span className="opacity-60">·</span>
-            <span>KAWASAKI</span>
-            <span className="opacity-60">·</span>
-            <span>BRP</span>
-            <span className="opacity-60">·</span>
-            <span>KRASH</span>
-          </div>
-        </Reveal>
-      </section>
+      <BrandsMarquee title={t("brandsTitle")} />
 
       {/* VALUE PROPS */}
       <section className="mx-auto max-w-7xl px-6 py-28">
