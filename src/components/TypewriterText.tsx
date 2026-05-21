@@ -40,10 +40,21 @@ export function TypewriterText({
     return () => clearTimeout(startTimer);
   }, [text, speed, startDelay]);
 
+  // Once the fade-out is finished, drop the caret from the DOM entirely.
+  const [caretGone, setCaretGone] = useState(false);
+  useEffect(() => {
+    if (!done) {
+      setCaretGone(false);
+      return;
+    }
+    const t = setTimeout(() => setCaretGone(true), 800);
+    return () => clearTimeout(t);
+  }, [done]);
+
   return (
     <span className={className} aria-label={text}>
       <span aria-hidden="true">{text.slice(0, count)}</span>
-      {cursor && (
+      {cursor && !caretGone && (
         <span
           aria-hidden="true"
           className={`type-caret ${done ? "type-caret-fade" : ""}`}

@@ -156,9 +156,12 @@ body {
   color: var(--accent);
   animation: caret-blink 0.95s steps(1) infinite;
 }
+@keyframes caret-fadeout {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
 .type-caret-fade {
-  animation: caret-blink 1.4s steps(1) infinite;
-  opacity: 0.4;
+  animation: caret-fadeout 700ms ease forwards;
 }
 @media (prefers-reduced-motion: reduce) {
   .type-caret { animation: none; opacity: 0; }
