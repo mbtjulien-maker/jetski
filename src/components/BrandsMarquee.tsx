@@ -1,138 +1,148 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
+import { promises as fs } from "fs";
+import path from "path";
 
 /**
- * Brand wordmarks — stylized SVGs that evoke each marque's identity.
- * Replace with official brand kits when available (dealer agreements
- * usually grant access to the manufacturer's SVG resources).
+ * Brand marks for the marquee.
+ *
+ * Real logos are trademarks; drop the official SVGs in `public/logos/`
+ * named `<slug>.svg` (e.g. `sea-doo.svg`, `yamaha.svg`) and they will
+ * be picked up automatically. Until then, each brand uses a stylized
+ * fallback wordmark with its own visual treatment.
  */
 
-const SeaDoo = () => (
-  <svg viewBox="0 0 220 60" className="h-9 w-auto" fill="currentColor" aria-label="Sea-Doo">
-    <text
-      x="0"
-      y="44"
-      fontFamily="var(--font-impact), Impact, sans-serif"
-      fontSize="46"
-      letterSpacing="-1"
-      fontStyle="italic"
-    >
-      SEA-DOO
-    </text>
-  </svg>
-);
+type Brand = {
+  slug: string;
+  name: string;
+  Fallback: () => ReactNode;
+};
 
-const Yamaha = () => (
-  <svg viewBox="0 0 240 60" className="h-9 w-auto" fill="currentColor" aria-label="Yamaha">
-    <text
-      x="0"
-      y="44"
-      fontFamily="var(--font-impact), Impact, sans-serif"
-      fontSize="46"
-      letterSpacing="4"
-    >
-      YAMAHA
-    </text>
-  </svg>
-);
-
-const Kawasaki = () => (
-  <svg viewBox="0 0 280 60" className="h-9 w-auto" fill="currentColor" aria-label="Kawasaki">
-    <text
-      x="0"
-      y="44"
-      fontFamily="var(--font-impact), Impact, sans-serif"
-      fontSize="46"
-      letterSpacing="2"
-      fontStyle="italic"
-    >
-      KAWASAKI
-    </text>
-  </svg>
-);
-
-const BRP = () => (
-  <svg viewBox="0 0 110 60" className="h-9 w-auto" fill="currentColor" aria-label="BRP">
-    <text
-      x="0"
-      y="44"
-      fontFamily="var(--font-impact), Impact, sans-serif"
-      fontSize="46"
-      letterSpacing="2"
-    >
-      BRP
-    </text>
-  </svg>
-);
-
-const Krash = () => (
-  <svg viewBox="0 0 170 60" className="h-9 w-auto" fill="currentColor" aria-label="Krash">
-    <text
-      x="0"
-      y="44"
-      fontFamily="var(--font-impact), Impact, sans-serif"
-      fontSize="46"
-      letterSpacing="3"
-    >
-      KRASH
-    </text>
-  </svg>
-);
-
-const HSR = () => (
-  <svg viewBox="0 0 130 60" className="h-9 w-auto" fill="currentColor" aria-label="HSR">
-    <text
-      x="0"
-      y="44"
-      fontFamily="var(--font-impact), Impact, sans-serif"
-      fontSize="46"
-      letterSpacing="4"
-    >
-      HSR
-    </text>
-  </svg>
-);
-
-const Honda = () => (
-  <svg viewBox="0 0 200 60" className="h-9 w-auto" fill="currentColor" aria-label="Honda">
-    <text
-      x="0"
-      y="44"
-      fontFamily="var(--font-impact), Impact, sans-serif"
-      fontSize="46"
-      letterSpacing="3"
-    >
-      HONDA
-    </text>
-  </svg>
-);
-
-const BRANDS: { name: string; Mark: () => ReactNode }[] = [
-  { name: "Sea-Doo", Mark: SeaDoo },
-  { name: "Yamaha", Mark: Yamaha },
-  { name: "Kawasaki", Mark: Kawasaki },
-  { name: "BRP", Mark: BRP },
-  { name: "Krash", Mark: Krash },
-  { name: "HSR", Mark: HSR },
-  { name: "Honda", Mark: Honda },
+const BRANDS: Brand[] = [
+  {
+    slug: "sea-doo",
+    name: "Sea-Doo",
+    Fallback: () => (
+      <span className="font-impact text-3xl italic flex items-center gap-2">
+        <span className="w-2 h-2 bg-accent rotate-45" />
+        SEA-DOO
+      </span>
+    ),
+  },
+  {
+    slug: "yamaha",
+    name: "Yamaha",
+    Fallback: () => (
+      <span className="font-impact text-3xl flex items-center gap-3">
+        <span className="flex gap-[3px] h-6 items-end">
+          <span className="w-[3px] h-4 bg-current" />
+          <span className="w-[3px] h-6 bg-current" />
+          <span className="w-[3px] h-4 bg-current" />
+        </span>
+        YAMAHA
+      </span>
+    ),
+  },
+  {
+    slug: "kawasaki",
+    name: "Kawasaki",
+    Fallback: () => (
+      <span className="font-impact text-3xl italic relative px-1">
+        KAWASAKI
+        <span className="absolute -bottom-1 left-0 right-2 h-[2px] bg-accent" />
+      </span>
+    ),
+  },
+  {
+    slug: "brp",
+    name: "BRP",
+    Fallback: () => (
+      <span className="font-impact text-3xl border-2 border-current px-3 py-0.5 tracking-widest">
+        BRP
+      </span>
+    ),
+  },
+  {
+    slug: "krash",
+    name: "Krash",
+    Fallback: () => (
+      <span className="font-impact text-3xl italic flex items-center gap-1">
+        KRASH
+        <span className="text-accent">/</span>
+      </span>
+    ),
+  },
+  {
+    slug: "hsr",
+    name: "HSR",
+    Fallback: () => (
+      <span className="font-impact text-3xl tracking-[0.25em]">HSR</span>
+    ),
+  },
+  {
+    slug: "honda",
+    name: "Honda",
+    Fallback: () => (
+      <span className="font-impact text-3xl flex items-center gap-2">
+        <span className="w-7 h-7 rounded-full border-2 border-current flex items-center justify-center text-base">
+          H
+        </span>
+        HONDA
+      </span>
+    ),
+  },
 ];
 
-export function BrandsMarquee({ title }: { title?: string }) {
-  // We render the list twice so the loop is seamless when translating -50%.
+async function brandsWithLogos() {
+  const dir = path.join(process.cwd(), "public", "logos");
+  let files: string[] = [];
+  try {
+    files = await fs.readdir(dir);
+  } catch {
+    // logos directory doesn't exist yet
+  }
+  const available = new Set(
+    files
+      .filter((f) => /\.(svg|png|webp)$/i.test(f))
+      .map((f) => f.replace(/\.(svg|png|webp)$/i, ""))
+  );
+  const fileExt = (slug: string) =>
+    files.find((f) => f.startsWith(slug + ".")) || "";
+  return BRANDS.map((b) => ({
+    ...b,
+    logoFile: available.has(b.slug) ? `/logos/${fileExt(b.slug)}` : null,
+  }));
+}
+
+export async function BrandsMarquee({ title }: { title?: string }) {
+  const items = await brandsWithLogos();
+
   const Row = () => (
-    <div className="flex items-center gap-x-20 px-10 shrink-0">
-      {BRANDS.map(({ name, Mark }) => (
+    <div className="flex items-center gap-x-16 px-8 shrink-0">
+      {items.map(({ slug, name, logoFile, Fallback }) => (
         <span
-          key={name}
-          className="flex items-center text-foreground/70 hover:text-foreground transition-colors"
+          key={slug}
+          className="flex items-center text-foreground/70 hover:text-foreground transition-colors h-10"
         >
-          <Mark />
+          {logoFile ? (
+            <Image
+              src={logoFile}
+              alt={name}
+              width={140}
+              height={40}
+              unoptimized
+              className="h-10 w-auto object-contain"
+            />
+          ) : (
+            <Fallback />
+          )}
         </span>
       ))}
     </div>
   );
 
   return (
-    <section className="border-y border-border py-12 overflow-hidden">
+    <section className="border-y border-border py-14 overflow-hidden bg-background">
       {title && (
         <p className="text-xs uppercase tracking-[0.3em] text-muted text-center mb-10">
           {title}
@@ -143,9 +153,8 @@ export function BrandsMarquee({ title }: { title?: string }) {
           <Row />
           <Row />
         </div>
-        {/* Side fade masks */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background via-background/80 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background via-background/80 to-transparent" />
       </div>
     </section>
   );
