@@ -50,7 +50,7 @@ export default async function HomePage({
           <p className="text-xs uppercase tracking-[0.3em] text-accent mb-6">
             {t("heroEyebrow")}
           </p>
-          <h1 className="font-display-italic text-5xl md:text-7xl lg:text-[8rem] font-light max-w-5xl leading-[0.95]">
+          <h1 className="font-impact text-6xl md:text-8xl lg:text-[10rem] max-w-5xl">
             {t("heroTitle")}
           </h1>
           <p className="mt-8 text-base md:text-lg text-muted max-w-xl leading-relaxed">

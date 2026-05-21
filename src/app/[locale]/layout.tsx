@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Fraunces } from "next/font/google";
+import { Geist, Fraunces, Anton } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -19,6 +19,13 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   style: ["normal", "italic"],
   axes: ["opsz", "SOFT"],
+  display: "swap",
+});
+
+const anton = Anton({
+  variable: "--font-impact",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -51,7 +58,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={`${geistSans.variable} ${fraunces.variable} antialiased`}>
+    <html lang={locale} className={`${geistSans.variable} ${fraunces.variable} ${anton.variable} antialiased`}>
       <body className="min-h-screen flex flex-col">
         <NextIntlClientProvider>
           <Header />
