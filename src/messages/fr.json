@@ -89,7 +89,7 @@
     "summary": "Récapitulatif"
   },
   "account": {
-    "title": "Mon compte",
+    "title": "Espace client",
     "orders": "Mes commandes",
     "noOrders": "Aucune commande pour le moment.",
     "orderNumber": "Commande",
@@ -99,7 +99,110 @@
     "statusPending": "En attente",
     "statusPaid": "Payée",
     "statusShipped": "Expédiée",
-    "statusDelivered": "Livrée"
+    "statusDelivered": "Livrée",
+    "nav": {
+      "dashboard": "Tableau de bord",
+      "profile": "Profil",
+      "orders": "Commandes",
+      "messages": "Messagerie",
+      "disputes": "Litiges",
+      "wishlist": "Favoris",
+      "quotes": "Devis",
+      "invoices": "Factures",
+      "signOut": "Déconnexion"
+    },
+    "overview": {
+      "welcome": "Bonjour",
+      "yourSpace": "Votre espace personnel — gérez vos commandes, devis, échanges et préférences.",
+      "ordersCount": "{count, plural, =0 {Aucune commande} =1 {1 commande} other {# commandes}}",
+      "messagesUnread": "{count, plural, =0 {Aucun message non lu} =1 {1 message non lu} other {# messages non lus}}",
+      "disputesOpen": "{count, plural, =0 {Aucun litige ouvert} =1 {1 litige ouvert} other {# litiges ouverts}}",
+      "wishlistCount": "{count, plural, =0 {Aucun favori} =1 {1 favori} other {# favoris}}",
+      "quotesCount": "{count, plural, =0 {Aucun devis} =1 {1 devis} other {# devis}}",
+      "viewAll": "Voir"
+    },
+    "profile": {
+      "title": "Mon profil",
+      "subtitle": "Vos informations personnelles et de livraison.",
+      "personal": "Informations personnelles",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "dateOfBirth": "Date de naissance",
+      "addressTitle": "Adresse",
+      "addressLine1": "Adresse",
+      "addressLine2": "Complément",
+      "city": "Ville",
+      "postalCode": "Code postal",
+      "country": "Pays",
+      "save": "Enregistrer",
+      "saved": "Modifications enregistrées."
+    },
+    "messages": {
+      "title": "Messagerie",
+      "subtitle": "Échanges avec notre service client. Réponse sous 24h ouvrées.",
+      "send": "Envoyer",
+      "placeholder": "Écrivez votre message…",
+      "empty": "Aucun message pour le moment. Lancez la conversation.",
+      "support": "Service client",
+      "you": "Vous"
+    },
+    "disputes": {
+      "title": "Litiges",
+      "subtitle": "Déclarez et suivez vos réclamations.",
+      "new": "Nouveau litige",
+      "newTitle": "Ouvrir un litige",
+      "theme": "Thème",
+      "themePicker": "Choisir un thème",
+      "subjectField": "Objet",
+      "bodyField": "Description",
+      "linkOrder": "Lié à une commande",
+      "linkOrderNone": "Aucune",
+      "submit": "Envoyer la déclaration",
+      "empty": "Aucun litige déclaré.",
+      "statusOpen": "Ouvert",
+      "statusInProgress": "En traitement",
+      "statusResolved": "Résolu",
+      "statusClosed": "Clôturé",
+      "themes": {
+        "delivery": "Problème de livraison",
+        "defect": "Défaut produit / qualité",
+        "billing": "Facturation / paiement",
+        "warranty": "Garantie",
+        "refund": "Remboursement",
+        "documents": "Documents manquants",
+        "other": "Autre"
+      },
+      "reply": "Réponse du service client"
+    },
+    "wishlist": {
+      "title": "Favoris",
+      "subtitle": "Les modèles que vous avez sauvegardés.",
+      "empty": "Aucun favori pour le moment.",
+      "remove": "Retirer",
+      "browse": "Découvrir la collection"
+    },
+    "quotes": {
+      "title": "Mes devis",
+      "subtitle": "Propositions personnalisées de notre équipe.",
+      "empty": "Aucun devis reçu pour le moment.",
+      "validUntil": "Valide jusqu'au",
+      "statusPending": "En attente",
+      "statusAccepted": "Accepté",
+      "statusDeclined": "Refusé",
+      "statusExpired": "Expiré",
+      "accept": "Accepter",
+      "decline": "Refuser",
+      "amount": "Montant"
+    },
+    "invoices": {
+      "title": "Factures",
+      "subtitle": "Factures de vos commandes payées.",
+      "empty": "Aucune facture disponible.",
+      "download": "Télécharger",
+      "invoiceNumber": "Facture"
+    }
   },
   "auth": {
     "signInTitle": "Connexion",

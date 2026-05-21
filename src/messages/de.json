@@ -89,7 +89,7 @@
     "summary": "Zusammenfassung"
   },
   "account": {
-    "title": "Mein Konto",
+    "title": "Kundenbereich",
     "orders": "Meine Bestellungen",
     "noOrders": "Noch keine Bestellungen.",
     "orderNumber": "Bestellung",
@@ -99,7 +99,110 @@
     "statusPending": "Ausstehend",
     "statusPaid": "Bezahlt",
     "statusShipped": "Versandt",
-    "statusDelivered": "Geliefert"
+    "statusDelivered": "Geliefert",
+    "nav": {
+      "dashboard": "Dashboard",
+      "profile": "Profil",
+      "orders": "Bestellungen",
+      "messages": "Nachrichten",
+      "disputes": "Reklamationen",
+      "wishlist": "Favoriten",
+      "quotes": "Angebote",
+      "invoices": "Rechnungen",
+      "signOut": "Abmelden"
+    },
+    "overview": {
+      "welcome": "Hallo",
+      "yourSpace": "Ihr persönlicher Bereich — verwalten Sie Bestellungen, Angebote und Nachrichten.",
+      "ordersCount": "{count, plural, =0 {Keine Bestellungen} =1 {1 Bestellung} other {# Bestellungen}}",
+      "messagesUnread": "{count, plural, =0 {Keine ungelesenen Nachrichten} =1 {1 ungelesene Nachricht} other {# ungelesene Nachrichten}}",
+      "disputesOpen": "{count, plural, =0 {Keine offenen Reklamationen} =1 {1 offene Reklamation} other {# offene Reklamationen}}",
+      "wishlistCount": "{count, plural, =0 {Keine Favoriten} =1 {1 Favorit} other {# Favoriten}}",
+      "quotesCount": "{count, plural, =0 {Keine Angebote} =1 {1 Angebot} other {# Angebote}}",
+      "viewAll": "Ansehen"
+    },
+    "profile": {
+      "title": "Mein Profil",
+      "subtitle": "Persönliche und Lieferinformationen.",
+      "personal": "Persönliche Daten",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "dateOfBirth": "Geburtsdatum",
+      "addressTitle": "Adresse",
+      "addressLine1": "Straße / Hausnummer",
+      "addressLine2": "Zusatz",
+      "city": "Stadt",
+      "postalCode": "PLZ",
+      "country": "Land",
+      "save": "Änderungen speichern",
+      "saved": "Änderungen gespeichert."
+    },
+    "messages": {
+      "title": "Nachrichten",
+      "subtitle": "Gespräche mit unserem Kundenservice. Antwort innerhalb von 24 Geschäftsstunden.",
+      "send": "Senden",
+      "placeholder": "Nachricht schreiben…",
+      "empty": "Noch keine Nachrichten. Starten Sie die Konversation.",
+      "support": "Kundenservice",
+      "you": "Sie"
+    },
+    "disputes": {
+      "title": "Reklamationen",
+      "subtitle": "Reklamationen einreichen und verfolgen.",
+      "new": "Neue Reklamation",
+      "newTitle": "Reklamation eröffnen",
+      "theme": "Thema",
+      "themePicker": "Thema auswählen",
+      "subjectField": "Betreff",
+      "bodyField": "Beschreibung",
+      "linkOrder": "Bezogen auf Bestellung",
+      "linkOrderNone": "Keine",
+      "submit": "Einreichen",
+      "empty": "Keine Reklamationen eingereicht.",
+      "statusOpen": "Offen",
+      "statusInProgress": "In Bearbeitung",
+      "statusResolved": "Gelöst",
+      "statusClosed": "Geschlossen",
+      "themes": {
+        "delivery": "Lieferproblem",
+        "defect": "Produktdefekt / Qualität",
+        "billing": "Abrechnung / Zahlung",
+        "warranty": "Garantie",
+        "refund": "Erstattung",
+        "documents": "Fehlende Dokumente",
+        "other": "Sonstiges"
+      },
+      "reply": "Antwort des Kundenservice"
+    },
+    "wishlist": {
+      "title": "Favoriten",
+      "subtitle": "Ihre gespeicherten Modelle.",
+      "empty": "Noch keine Favoriten.",
+      "remove": "Entfernen",
+      "browse": "Kollektion entdecken"
+    },
+    "quotes": {
+      "title": "Meine Angebote",
+      "subtitle": "Personalisierte Angebote unseres Teams.",
+      "empty": "Noch keine Angebote erhalten.",
+      "validUntil": "Gültig bis",
+      "statusPending": "Ausstehend",
+      "statusAccepted": "Angenommen",
+      "statusDeclined": "Abgelehnt",
+      "statusExpired": "Abgelaufen",
+      "accept": "Annehmen",
+      "decline": "Ablehnen",
+      "amount": "Betrag"
+    },
+    "invoices": {
+      "title": "Rechnungen",
+      "subtitle": "Rechnungen Ihrer bezahlten Bestellungen.",
+      "empty": "Keine Rechnungen verfügbar.",
+      "download": "Herunterladen",
+      "invoiceNumber": "Rechnung"
+    }
   },
   "auth": {
     "signInTitle": "Anmelden",

@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { Logo } from "./Logo";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { MobileMenu } from "./MobileMenu";
+import { HeaderSearch } from "./HeaderSearch";
 import { IconShoppingBag, IconUser } from "@tabler/icons-react";
 import { readCart, cartCount } from "@/lib/cart";
 import { auth } from "@/lib/auth";
@@ -26,6 +27,7 @@ export async function Header() {
           <Link href="/contact" className="link-underline">{t("contact")}</Link>
         </nav>
         <div className="flex items-center gap-5">
+          <HeaderSearch />
           <div className="hidden md:block">
             <LocaleSwitcher />
           </div>

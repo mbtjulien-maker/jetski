@@ -89,7 +89,7 @@
     "summary": "Riepilogo"
   },
   "account": {
-    "title": "Il mio account",
+    "title": "Area cliente",
     "orders": "I miei ordini",
     "noOrders": "Nessun ordine al momento.",
     "orderNumber": "Ordine",
@@ -99,7 +99,110 @@
     "statusPending": "In attesa",
     "statusPaid": "Pagato",
     "statusShipped": "Spedito",
-    "statusDelivered": "Consegnato"
+    "statusDelivered": "Consegnato",
+    "nav": {
+      "dashboard": "Dashboard",
+      "profile": "Profilo",
+      "orders": "Ordini",
+      "messages": "Messaggi",
+      "disputes": "Reclami",
+      "wishlist": "Preferiti",
+      "quotes": "Preventivi",
+      "invoices": "Fatture",
+      "signOut": "Esci"
+    },
+    "overview": {
+      "welcome": "Ciao",
+      "yourSpace": "Il tuo spazio personale — gestisci ordini, preventivi e conversazioni.",
+      "ordersCount": "{count, plural, =0 {Nessun ordine} =1 {1 ordine} other {# ordini}}",
+      "messagesUnread": "{count, plural, =0 {Nessun messaggio non letto} =1 {1 messaggio non letto} other {# messaggi non letti}}",
+      "disputesOpen": "{count, plural, =0 {Nessun reclamo aperto} =1 {1 reclamo aperto} other {# reclami aperti}}",
+      "wishlistCount": "{count, plural, =0 {Nessun preferito} =1 {1 preferito} other {# preferiti}}",
+      "quotesCount": "{count, plural, =0 {Nessun preventivo} =1 {1 preventivo} other {# preventivi}}",
+      "viewAll": "Vedi"
+    },
+    "profile": {
+      "title": "Il mio profilo",
+      "subtitle": "Informazioni personali e di spedizione.",
+      "personal": "Dati personali",
+      "firstName": "Nome",
+      "lastName": "Cognome",
+      "email": "Email",
+      "phone": "Telefono",
+      "dateOfBirth": "Data di nascita",
+      "addressTitle": "Indirizzo",
+      "addressLine1": "Indirizzo",
+      "addressLine2": "Complemento",
+      "city": "Città",
+      "postalCode": "CAP",
+      "country": "Paese",
+      "save": "Salva modifiche",
+      "saved": "Modifiche salvate."
+    },
+    "messages": {
+      "title": "Messaggi",
+      "subtitle": "Conversazioni con il nostro servizio clienti. Risposta entro 24h lavorative.",
+      "send": "Invia",
+      "placeholder": "Scrivi il tuo messaggio…",
+      "empty": "Nessun messaggio. Inizia la conversazione.",
+      "support": "Assistenza",
+      "you": "Tu"
+    },
+    "disputes": {
+      "title": "Reclami",
+      "subtitle": "Presenta e segui i tuoi reclami.",
+      "new": "Nuovo reclamo",
+      "newTitle": "Apri un reclamo",
+      "theme": "Tema",
+      "themePicker": "Seleziona un tema",
+      "subjectField": "Oggetto",
+      "bodyField": "Descrizione",
+      "linkOrder": "Ordine collegato",
+      "linkOrderNone": "Nessuno",
+      "submit": "Invia",
+      "empty": "Nessun reclamo presentato.",
+      "statusOpen": "Aperto",
+      "statusInProgress": "In gestione",
+      "statusResolved": "Risolto",
+      "statusClosed": "Chiuso",
+      "themes": {
+        "delivery": "Problema di consegna",
+        "defect": "Difetto prodotto / qualità",
+        "billing": "Fatturazione / pagamento",
+        "warranty": "Garanzia",
+        "refund": "Rimborso",
+        "documents": "Documenti mancanti",
+        "other": "Altro"
+      },
+      "reply": "Risposta del servizio clienti"
+    },
+    "wishlist": {
+      "title": "Preferiti",
+      "subtitle": "I modelli che hai salvato.",
+      "empty": "Nessun preferito al momento.",
+      "remove": "Rimuovi",
+      "browse": "Scopri la collezione"
+    },
+    "quotes": {
+      "title": "I miei preventivi",
+      "subtitle": "Proposte personalizzate del nostro team.",
+      "empty": "Nessun preventivo ricevuto.",
+      "validUntil": "Valido fino al",
+      "statusPending": "In attesa",
+      "statusAccepted": "Accettato",
+      "statusDeclined": "Rifiutato",
+      "statusExpired": "Scaduto",
+      "accept": "Accetta",
+      "decline": "Rifiuta",
+      "amount": "Importo"
+    },
+    "invoices": {
+      "title": "Fatture",
+      "subtitle": "Fatture dei tuoi ordini pagati.",
+      "empty": "Nessuna fattura disponibile.",
+      "download": "Scarica",
+      "invoiceNumber": "Fattura"
+    }
   },
   "auth": {
     "signInTitle": "Accedi",

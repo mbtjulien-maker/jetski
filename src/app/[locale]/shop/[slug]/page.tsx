@@ -7,6 +7,8 @@ import { Link } from "@/i18n/navigation";
 import { ProductGallery } from "@/components/ProductGallery";
 import { StickyMobileCTA } from "@/components/StickyMobileCTA";
 import { RelatedProducts } from "@/components/RelatedProducts";
+import { WishlistButton } from "@/components/WishlistButton";
+import { auth } from "@/lib/auth";
 import {
   IconChevronLeft,
   IconTruck,
@@ -42,6 +44,15 @@ export default async function ProductPage({
 
   const product = await prisma.product.findUnique({ where: { slug } });
   if (!product) notFound();
+
+  const session = await auth().catch(() => null);
+  let inWishlist = false;
+  if (session?.user?.id) {
+    const w = await prisma.wishlist.findUnique({
+      where: { userId_productId: { userId: session.user.id, productId: product.id } },
+    });
+    inWishlist = !!w;
+  }
 
   const descKey: LocalizedDesc = `description${locale[0].toUpperCase() + locale.slice(1)}` as LocalizedDesc;
   const description = product[descKey];
@@ -101,20 +112,25 @@ export default async function ProductPage({
               )}
             </div>
 
-            <form
-              id="add-to-cart-anchor"
-              action={addToCartFormAction}
-              className="mt-8"
-            >
-              <input type="hidden" name="productId" value={product.id} />
-              <button
-                type="submit"
-                disabled={!inStock}
-                className="btn-primary w-full disabled:opacity-40 disabled:cursor-not-allowed"
-              >
-                {inStock ? t("addToCart") : t("outOfStock")}
-              </button>
-            </form>
+            <div id="add-to-cart-anchor" className="mt-8 flex items-stretch gap-3">
+              <form action={addToCartFormAction} className="flex-1">
+                <input type="hidden" name="productId" value={product.id} />
+                <button
+                  type="submit"
+                  disabled={!inStock}
+                  className="btn-primary w-full disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  {inStock ? t("addToCart") : t("outOfStock")}
+                </button>
+              </form>
+              <div className="border border-border px-4 flex items-center">
+                <WishlistButton
+                  productId={product.id}
+                  initial={inWishlist}
+                  requiresAuth={!session?.user?.id}
+                />
+              </div>
+            </div>
 
             <div className="mt-6 grid grid-cols-2 gap-3 text-xs text-muted">
               <div className="flex items-start gap-2">

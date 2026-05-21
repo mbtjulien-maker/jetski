@@ -89,7 +89,7 @@
     "summary": "Summary"
   },
   "account": {
-    "title": "My account",
+    "title": "Account",
     "orders": "My orders",
     "noOrders": "No orders yet.",
     "orderNumber": "Order",
@@ -99,7 +99,110 @@
     "statusPending": "Pending",
     "statusPaid": "Paid",
     "statusShipped": "Shipped",
-    "statusDelivered": "Delivered"
+    "statusDelivered": "Delivered",
+    "nav": {
+      "dashboard": "Dashboard",
+      "profile": "Profile",
+      "orders": "Orders",
+      "messages": "Messages",
+      "disputes": "Disputes",
+      "wishlist": "Wishlist",
+      "quotes": "Quotes",
+      "invoices": "Invoices",
+      "signOut": "Sign out"
+    },
+    "overview": {
+      "welcome": "Hello",
+      "yourSpace": "Your personal space — manage your orders, quotes, conversations and preferences.",
+      "ordersCount": "{count, plural, =0 {No orders} =1 {1 order} other {# orders}}",
+      "messagesUnread": "{count, plural, =0 {No unread messages} =1 {1 unread message} other {# unread messages}}",
+      "disputesOpen": "{count, plural, =0 {No open disputes} =1 {1 open dispute} other {# open disputes}}",
+      "wishlistCount": "{count, plural, =0 {No favorites} =1 {1 favorite} other {# favorites}}",
+      "quotesCount": "{count, plural, =0 {No quotes} =1 {1 quote} other {# quotes}}",
+      "viewAll": "View"
+    },
+    "profile": {
+      "title": "My profile",
+      "subtitle": "Your personal and shipping information.",
+      "personal": "Personal info",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "dateOfBirth": "Date of birth",
+      "addressTitle": "Address",
+      "addressLine1": "Address",
+      "addressLine2": "Address line 2",
+      "city": "City",
+      "postalCode": "Postal code",
+      "country": "Country",
+      "save": "Save changes",
+      "saved": "Changes saved."
+    },
+    "messages": {
+      "title": "Messages",
+      "subtitle": "Conversations with our support team. Reply within 24h business hours.",
+      "send": "Send",
+      "placeholder": "Write your message…",
+      "empty": "No messages yet. Start the conversation.",
+      "support": "Support",
+      "you": "You"
+    },
+    "disputes": {
+      "title": "Disputes",
+      "subtitle": "File and track your complaints.",
+      "new": "New dispute",
+      "newTitle": "Open a dispute",
+      "theme": "Theme",
+      "themePicker": "Select a theme",
+      "subjectField": "Subject",
+      "bodyField": "Description",
+      "linkOrder": "Linked order",
+      "linkOrderNone": "None",
+      "submit": "Submit",
+      "empty": "No disputes filed.",
+      "statusOpen": "Open",
+      "statusInProgress": "In progress",
+      "statusResolved": "Resolved",
+      "statusClosed": "Closed",
+      "themes": {
+        "delivery": "Delivery issue",
+        "defect": "Product defect / quality",
+        "billing": "Billing / payment",
+        "warranty": "Warranty",
+        "refund": "Refund",
+        "documents": "Missing documents",
+        "other": "Other"
+      },
+      "reply": "Support reply"
+    },
+    "wishlist": {
+      "title": "Favorites",
+      "subtitle": "The models you've saved.",
+      "empty": "No favorites yet.",
+      "remove": "Remove",
+      "browse": "Browse the collection"
+    },
+    "quotes": {
+      "title": "My quotes",
+      "subtitle": "Personalized proposals from our team.",
+      "empty": "No quotes received yet.",
+      "validUntil": "Valid until",
+      "statusPending": "Pending",
+      "statusAccepted": "Accepted",
+      "statusDeclined": "Declined",
+      "statusExpired": "Expired",
+      "accept": "Accept",
+      "decline": "Decline",
+      "amount": "Amount"
+    },
+    "invoices": {
+      "title": "Invoices",
+      "subtitle": "Invoices for your paid orders.",
+      "empty": "No invoices available.",
+      "download": "Download",
+      "invoiceNumber": "Invoice"
+    }
   },
   "auth": {
     "signInTitle": "Sign in",
