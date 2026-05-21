@@ -52,7 +52,7 @@ export default async function HomePage({
             {t("heroEyebrow")}
           </p>
           <h1 className="font-impact text-6xl md:text-8xl lg:text-[10rem] max-w-5xl text-[#9ca3af]">
-            <TypewriterText text={t("heroTitle")} />
+            <TypewriterText text={t("heroTitle")} speed={90} startDelay={600} />
           </h1>
           <p className="mt-8 text-base md:text-lg text-muted max-w-xl leading-relaxed">
             {t("heroSubtitle")}
