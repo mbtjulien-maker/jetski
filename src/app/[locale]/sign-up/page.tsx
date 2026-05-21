@@ -11,7 +11,7 @@ export default async function SignUpPage({
   const t = await getTranslations("auth");
   return (
     <div className="mx-auto max-w-md px-6 py-24">
-      <h1 className="text-3xl font-light tracking-tight">{t("signUpTitle")}</h1>
+      <h1 className="font-display text-4xl font-light tracking-tight">{t("signUpTitle")}</h1>
       <p className="text-muted mt-2">{t("signUpSubtitle")}</p>
       <SignUpForm />
     </div>

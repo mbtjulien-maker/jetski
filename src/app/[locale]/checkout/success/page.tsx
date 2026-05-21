@@ -24,7 +24,7 @@ export default async function SuccessPage({
   return (
     <div className="mx-auto max-w-2xl px-6 py-32 text-center">
       <IconCircleCheck size={48} stroke={1.5} className="text-accent mx-auto mb-8" />
-      <h1 className="text-3xl md:text-4xl font-light tracking-tight">
+      <h1 className="font-display-italic text-4xl md:text-5xl font-light tracking-tight">
         Merci pour votre commande
       </h1>
       <p className="text-muted mt-4">

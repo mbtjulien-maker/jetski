@@ -38,7 +38,7 @@ export default async function CheckoutPage({
 
   return (
     <div className="mx-auto max-w-6xl px-6 pt-16 pb-32">
-      <h1 className="text-4xl md:text-5xl font-light tracking-tight mb-12">
+      <h1 className="font-display text-5xl md:text-6xl font-light tracking-tight mb-12">
         {t("title")}
       </h1>
 

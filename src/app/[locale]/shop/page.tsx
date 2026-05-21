@@ -60,7 +60,7 @@ export default async function ShopPage({
   return (
     <div className="mx-auto max-w-7xl px-6 pt-16 pb-32">
       <header className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-light tracking-tight">{t("title")}</h1>
+        <h1 className="font-display text-5xl md:text-6xl font-light tracking-tight">{t("title")}</h1>
         <p className="mt-2 text-muted">{t("results", { count: products.length })}</p>
       </header>
 

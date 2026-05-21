@@ -46,7 +46,7 @@ export default async function AboutPage({
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
       </section>
       <article className="mx-auto max-w-3xl px-6 py-24">
-        <h1 className="text-4xl md:text-5xl font-light tracking-tight leading-tight">
+        <h1 className="font-display-italic text-5xl md:text-6xl font-light tracking-tight leading-[1.05]">
           {c.title}
         </h1>
         <p className="text-xl text-muted mt-8 leading-relaxed">{c.lead}</p>

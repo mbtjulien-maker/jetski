@@ -20,7 +20,7 @@ export default async function ContactPage({
   return (
     <div className="mx-auto max-w-5xl px-6 py-24 grid lg:grid-cols-[1fr_360px] gap-16">
       <div>
-        <h1 className="text-4xl md:text-5xl font-light tracking-tight">{l.title}</h1>
+        <h1 className="font-display text-5xl md:text-6xl font-light tracking-tight">{l.title}</h1>
         <p className="text-muted mt-4 max-w-md">{l.lead}</p>
 
         <form className="mt-12 space-y-5 max-w-md">

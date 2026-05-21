@@ -35,7 +35,7 @@ export default async function AccountPage({
     <div className="mx-auto max-w-5xl px-6 py-24">
       <div className="flex items-end justify-between mb-12">
         <div>
-          <h1 className="text-4xl md:text-5xl font-light tracking-tight">
+          <h1 className="font-display text-5xl md:text-6xl font-light tracking-tight">
             {t("title")}
           </h1>
           <p className="text-muted mt-2">{session.user.email}</p>
