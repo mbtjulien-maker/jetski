@@ -34,11 +34,12 @@ export default async function HomePage({
       <section className="relative h-[92vh] min-h-[640px] flex items-end overflow-hidden">
         <div className="absolute inset-0 animate-ken-burns">
           <Image
-            src="https://images.unsplash.com/photo-1755566981083-5e54b2915148?w=2400&q=80"
+            src="/hero.png"
             alt=""
             fill
             priority
-            className="object-cover"
+            sizes="100vw"
+            className="object-cover object-center"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/20" />
