@@ -5,6 +5,7 @@ import { prisma } from "@/lib/prisma";
 import { ProductCard } from "@/components/ProductCard";
 import { ScrollCue } from "@/components/ScrollCue";
 import { Reveal } from "@/components/Reveal";
+import { TypewriterText } from "@/components/TypewriterText";
 import { IconArrowRight, IconTruck, IconShield, IconCreditCard } from "@tabler/icons-react";
 
 export default async function HomePage({
@@ -51,7 +52,7 @@ export default async function HomePage({
             {t("heroEyebrow")}
           </p>
           <h1 className="font-impact text-6xl md:text-8xl lg:text-[10rem] max-w-5xl text-[#9ca3af]">
-            {t("heroTitle")}
+            <TypewriterText text={t("heroTitle")} />
           </h1>
           <p className="mt-8 text-base md:text-lg text-muted max-w-xl leading-relaxed">
             {t("heroSubtitle")}
