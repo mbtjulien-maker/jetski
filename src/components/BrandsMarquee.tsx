@@ -84,16 +84,16 @@ export async function BrandsMarquee({ title }: { title?: string }) {
       {items.map(({ slug, name, logoFile, Fallback }) => (
         <span
           key={slug}
-          className="flex items-center text-foreground/70 hover:text-foreground transition-colors h-10"
+          className="flex items-center text-foreground/70 hover:text-foreground transition-colors h-16"
         >
           {logoFile ? (
             <Image
               src={logoFile}
               alt={name}
-              width={140}
-              height={40}
+              width={160}
+              height={64}
               unoptimized
-              className="h-10 w-auto object-contain"
+              className="h-14 md:h-16 w-auto object-contain"
             />
           ) : (
             <Fallback />
