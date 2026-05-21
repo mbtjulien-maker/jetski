@@ -34,7 +34,7 @@ export default async function HomePage({
       <section className="relative h-[92vh] min-h-[640px] flex items-end overflow-hidden">
         <div className="absolute inset-0 animate-ken-burns">
           <Image
-            src="/hero.png"
+            src="/hero-alt.png"
             alt=""
             fill
             priority
