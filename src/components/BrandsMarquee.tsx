@@ -53,44 +53,6 @@ const BRANDS: Brand[] = [
       </span>
     ),
   },
-  {
-    slug: "brp",
-    name: "BRP",
-    Fallback: () => (
-      <span className="font-impact text-3xl border-2 border-current px-3 py-0.5 tracking-widest">
-        BRP
-      </span>
-    ),
-  },
-  {
-    slug: "krash",
-    name: "Krash",
-    Fallback: () => (
-      <span className="font-impact text-3xl italic flex items-center gap-1">
-        KRASH
-        <span className="text-accent">/</span>
-      </span>
-    ),
-  },
-  {
-    slug: "hsr",
-    name: "HSR",
-    Fallback: () => (
-      <span className="font-impact text-3xl tracking-[0.25em]">HSR</span>
-    ),
-  },
-  {
-    slug: "honda",
-    name: "Honda",
-    Fallback: () => (
-      <span className="font-impact text-3xl flex items-center gap-2">
-        <span className="w-7 h-7 rounded-full border-2 border-current flex items-center justify-center text-base">
-          H
-        </span>
-        HONDA
-      </span>
-    ),
-  },
 ];
 
 async function brandsWithLogos() {
