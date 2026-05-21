@@ -59,6 +59,7 @@ export default async function HomePage({
               startDelay={600}
               holdMs={5000}
               loop
+              cursor={false}
             />
           </h1>
           <p className="mt-8 text-base md:text-lg text-muted max-w-xl leading-relaxed">
