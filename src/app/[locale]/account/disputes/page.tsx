@@ -51,7 +51,7 @@ export default async function DisputesPage({
       </header>
 
       {disputes.length === 0 ? (
-        <div className="border border-border p-10 text-center">
+        <div className="border border-border/60 glass p-10 text-center">
           <p className="text-muted">{t("empty")}</p>
         </div>
       ) : (
@@ -60,7 +60,7 @@ export default async function DisputesPage({
             <li key={d.id}>
               <Link
                 href={`/account/disputes/${d.id}`}
-                className="block border border-border p-5 hover:bg-surface/60 transition-colors"
+                className="block border border-border/60 glass p-5 hover:bg-background/75 transition-colors"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="min-w-0">

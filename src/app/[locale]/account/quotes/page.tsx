@@ -46,7 +46,7 @@ export default async function QuotesPage({
       </header>
 
       {quotes.length === 0 ? (
-        <div className="border border-border p-10 text-center">
+        <div className="border border-border/60 glass p-10 text-center">
           <p className="text-muted">{t("empty")}</p>
         </div>
       ) : (
@@ -54,7 +54,7 @@ export default async function QuotesPage({
           {quotes.map((q) => (
             <li
               key={q.id}
-              className="border border-border p-6 grid md:grid-cols-[1fr_auto] gap-4 items-start"
+              className="border border-border/60 glass p-6 grid md:grid-cols-[1fr_auto] gap-4 items-start"
             >
               <div>
                 <p

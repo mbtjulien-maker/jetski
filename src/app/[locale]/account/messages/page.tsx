@@ -43,7 +43,7 @@ export default async function MessagesPage({
         <p className="text-muted text-sm mt-2">{t("subtitle")}</p>
       </header>
 
-      <div className="flex-1 border border-border overflow-y-auto p-6 space-y-4 bg-surface/40">
+      <div className="flex-1 border border-border/60 overflow-y-auto p-6 space-y-4 glass">
         {messages.length === 0 ? (
           <p className="text-muted text-center py-12">{t("empty")}</p>
         ) : (
@@ -58,7 +58,7 @@ export default async function MessagesPage({
                 className={`max-w-[85%] px-4 py-3 ${
                   m.sender === "user"
                     ? "bg-accent text-background"
-                    : "bg-surface border border-border"
+                    : "glass-strong border border-border/60"
                 }`}
               >
                 <p className="text-[10px] uppercase tracking-wider opacity-70 mb-1">

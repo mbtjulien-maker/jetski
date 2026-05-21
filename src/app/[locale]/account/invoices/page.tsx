@@ -35,11 +35,11 @@ export default async function InvoicesPage({
       </header>
 
       {orders.length === 0 ? (
-        <div className="border border-border p-10 text-center">
+        <div className="border border-border/60 glass p-10 text-center">
           <p className="text-muted">{t("empty")}</p>
         </div>
       ) : (
-        <ul className="divide-y divide-border border border-border">
+        <ul className="divide-y divide-border/60 border border-border/60 glass">
           {orders.map((o) => (
             <li
               key={o.id}

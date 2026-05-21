@@ -126,7 +126,7 @@ export default async function AccountDashboardPage({
             <Link
               key={c.href}
               href={c.href}
-              className="group relative border border-border p-6 bg-surface/40 hover:bg-surface transition-colors"
+              className="group relative border border-border/60 p-6 glass hover:bg-background/70 transition-colors"
             >
               <Icon size={22} stroke={1.5} className="text-accent mb-6" />
               <h2 className="text-base font-medium">{c.label}</h2>

@@ -30,7 +30,7 @@ export function MessageComposer({
         rows={2}
         required
         placeholder={placeholder}
-        className="flex-1 bg-surface border border-border px-4 py-3 text-sm resize-none focus:border-accent outline-none"
+        className="flex-1 glass border border-border/60 px-4 py-3 text-sm resize-none focus:border-accent outline-none"
       />
       <button
         type="submit"

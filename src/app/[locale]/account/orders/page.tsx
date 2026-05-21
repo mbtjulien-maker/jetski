@@ -38,7 +38,7 @@ export default async function OrdersPage({
         </h2>
       </header>
       {orders.length === 0 ? (
-        <div className="border border-border p-10 text-center">
+        <div className="border border-border/60 glass p-10 text-center">
           <p className="text-muted">{t("noOrders")}</p>
           <Link href="/shop" className="inline-block mt-6 btn-primary">
             Découvrir la collection
@@ -49,7 +49,7 @@ export default async function OrdersPage({
           {orders.map((o) => (
             <li
               key={o.id}
-              className="border border-border p-6 flex flex-wrap items-center justify-between gap-4"
+              className="border border-border/60 p-6 glass flex flex-wrap items-center justify-between gap-4"
             >
               <div>
                 <p className="text-xs uppercase tracking-wider text-muted">

@@ -121,6 +121,18 @@ body {
   transform-origin: left;
 }
 
+/* Glass panel — lets the background image bleed through */
+.glass {
+  background-color: rgba(10, 10, 10, 0.55) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(120%) !important;
+  backdrop-filter: blur(14px) saturate(120%) !important;
+}
+.glass-strong {
+  background-color: rgba(10, 10, 10, 0.78) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(130%) !important;
+  backdrop-filter: blur(20px) saturate(130%) !important;
+}
+
 /* Editorial serif headings */
 .font-display {
   font-family: var(--font-display), Georgia, serif;

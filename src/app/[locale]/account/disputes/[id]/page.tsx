@@ -54,7 +54,7 @@ export default async function DisputeDetailPage({
         </p>
       </header>
 
-      <article className="border border-border p-6 bg-surface/40">
+      <article className="border border-border/60 glass p-6">
         <p className="text-xs uppercase tracking-wider text-muted mb-3">
           {t("bodyField")}
         </p>
