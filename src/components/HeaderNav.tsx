@@ -24,15 +24,15 @@ const ITEMS: Item[] = [
 export function HeaderNav() {
   const t = useTranslations("nav");
   return (
-    <nav className="hidden md:flex items-center gap-1">
+    <nav className="hidden md:flex items-center gap-5 lg:gap-7">
       {ITEMS.map(({ href, key, Icon }) => (
         <Link
           key={key}
           href={href}
-          className="group relative w-10 h-10 flex items-center justify-center text-foreground/80 hover:text-accent transition-colors"
+          className="group relative w-12 h-12 flex items-center justify-center text-foreground/80 hover:text-accent transition-colors"
           aria-label={t(key)}
         >
-          <Icon size={20} stroke={1.5} />
+          <Icon size={26} stroke={1.5} />
           <span
             className="pointer-events-none absolute top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] uppercase tracking-[0.2em] text-foreground/90 bg-background/90 backdrop-blur-md border border-border/70 px-2 py-1 opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-150"
           >
